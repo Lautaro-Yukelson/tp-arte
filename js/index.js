@@ -14,7 +14,7 @@ for (let tp of Trabajos) {
             alt="img banda"
           />
         </a>
-        <main class="main-content">
+        <div class="main-content">
           <h1><a href="#">${tp.title}</a></h1>
           <p>${tp.desc}</p>
           <div class="flex-row">
@@ -27,7 +27,7 @@ for (let tp of Trabajos) {
               <p>${tp.date}</p>
             </div>
           </div>
-        </main>
+        </div>
         <div class="card-attribute">
           <img
             src="https://i.postimg.cc/SQBzNQf1/image-avatar.png"
