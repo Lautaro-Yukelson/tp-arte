@@ -311,7 +311,71 @@ body.dark .switch::before{
 }
 
 /******************************** Index ********************************/
+.home .bienvenida {
+    width: 100%;
+    height: fit-content;
+    text-align: center;
+    position: relative;
+}
 
+.home .bienvenida::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    width: 80%;
+    border-bottom: solid;
+}
+
+.home .tecnologias{
+    width: 100%;
+    height: fit-content;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.home .tecnologias::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    width: 80%;
+    border-bottom: solid;
+}
+
+.home h2{
+    font-size: 30px;
+}
+
+.home .tecnologias .images {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 10px;
+    overflow-x: auto;
+    text-align: center;
+}
+
+.home .tecnologias .images img {
+    width: 60%;
+    height: auto;
+    object-fit: cover;
+    justify-self: center;
+}
+
+.home .destacados {
+    width: 100%;
+    height: fit-content;
+    text-align: center;
+    position: relative;
+}
+
+.trabajos{
+    display: flex;
+    justify-content: center;
+}
 
 
 
@@ -344,13 +408,12 @@ body.dark .switch::before{
     min-height: 370px;
     border-radius: 20px;
     background: var(--primary-color-light);
-    box-shadow: 2px 2px 5px var(--primary-color-light),
-      -2px -2px 5px var(--primary-color);
     transition: 0.4s;
 }  
   
 .card:hover {
-    translate: 0 -10px;
+    box-shadow: 2px 2px 5px var(--primary-color-light),
+      -2px -2px 5px var(--primary-color);
 }
   
 .card-title {
