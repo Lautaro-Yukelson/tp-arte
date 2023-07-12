@@ -15,7 +15,7 @@ function mostrarTrabajos(){
             <p class="card-body">
                 ${tp.desc}
             </p>
-            <p class="footer">Por <span class="by-name">${tp.author}</span> - <span class="date">${tp.curso}</span></p>
+            <p class="footerC">Por <span class="by-name">${tp.author}</span> - <span class="date">${tp.curso}</span></p>
         </a>
       `;
       container.appendChild(card);

@@ -24,11 +24,38 @@
     --tran-05: all 0.5s ease;
 }
 
+html, body {
+    height: 100%;
+    margin: 0;
+}
+  
+.main {
+    flex: 1;
+}
+  
+footer {
+    height: 40px;
+    width: 100%;
+    background: var(--primary-color-light);
+    color: var(--text-color);
+    padding-left: 10px;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+}
+
+footer p{
+    font-size: 16px;
+}
+
 body{
     min-height: 100vh;
     justify-content: 100vh;
     background: var(--body-color);
     transition: var(--tran-04);
+    display: flex;
+    flex-direction: column;
 }
 
 body.dark{
@@ -172,7 +199,7 @@ body.dark .sidebar header .toggle{
 
 .search-box input{
     height: 100%;
-    width: 100%;
+    width: 100%;    
     outline: none;
     border: none;
     font-size: 14px;
@@ -367,19 +394,20 @@ body.dark .switch::before{
 
 .home .destacados {
     width: 100%;
+    margin-top: 30px;
     height: fit-content;
     text-align: center;
     position: relative;
 }
 
-.trabajos{
+.destacados .trabajos{
     display: flex;
     justify-content: center;
 }
 
-
-
-
+.destacados .trabajos .card{
+    margin: 0;
+}
 
 /******************************* Trabajos ********************************/
 /******************************* Cards ********************************/
@@ -443,7 +471,7 @@ body.dark .switch::before{
     text-align: justify;
 }
   
-.card .footer {
+.card .footerC {
     float: right;
     margin: 28px 0 0 18px;
     font-size: 13px;
@@ -461,15 +489,62 @@ body.dark .switch::before{
       grid-template-columns: repeat(2, minmax(100px, 1fr));
     }
 }
-  
+
+@media (max-width: 1100px){
+    .home .tecnologias .images {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
 @media (max-width: 870px) {
     .cards-container {
       grid-template-columns: repeat(1, minmax(100px, 1fr));
     }
 }
 
+@media (max-width: 650px){
+    .home h1{
+        font-size: 23px;
+    }
+    .home h2{
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 560px){
+    .home .tecnologias .images {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    footer p{
+        font-size: 12px;
+    }
+}
+
 @media (max-width: 450px) {
+    .home h1{
+        font-size: 20px;
+    }
+
+    .home h2{
+        font-size: 17px;
+    }
+
+    .home .tecnologias .images {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
     .card{
         width: 100%;
+    }
+
+    footer p{
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 380px){
+    footer p{
+        font-size: 8px;
     }
 }
